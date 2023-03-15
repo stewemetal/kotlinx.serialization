@@ -76,9 +76,9 @@ class EnumDescriptorsTest {
 
     private fun assertFullyAnnotated(descriptor: SerialDescriptor) {
         // plugin changes are expected, delete and uncomment when this condition will fail
-        assertEquals(0, descriptor.annotations.size)
-//        assertEquals(1, descriptor.annotations.size)
-//        assertEquals("On Class", (descriptor.annotations.first() as SerialAnnotation).text)
+//        assertEquals(0, descriptor.annotations.size)
+        assertEquals(1, descriptor.annotations.size)
+        assertEquals("On Class", (descriptor.annotations.first() as SerialAnnotation).text)
 
         assertEquals(1, descriptor.getElementAnnotations(0).size)
         assertEquals("On A", (descriptor.getElementAnnotations(0).first() as SerialAnnotation).text)
@@ -97,9 +97,9 @@ class EnumDescriptorsTest {
 
     private fun assertClassAnnotated(descriptor: SerialDescriptor) {
         // plugin changes are expected, delete and uncomment when this condition will fail
-        assertEquals(0, descriptor.annotations.size)
-//        assertEquals(1, descriptor.annotations.size)
-//        assertEquals("On Class", (descriptor.annotations.first() as SerialAnnotation).text)
+//        assertEquals(0, descriptor.annotations.size)
+        assertEquals(1, descriptor.annotations.size)
+        assertEquals("On Class", (descriptor.annotations.first() as SerialAnnotation).text)
     }
 
 }
