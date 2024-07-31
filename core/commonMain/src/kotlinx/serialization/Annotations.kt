@@ -371,8 +371,11 @@ public annotation class ExperimentalSerializationApi
 @RequiresOptIn(level = RequiresOptIn.Level.ERROR)
 public annotation class InternalSerializationApi
 
+/**
+ * TODO
+ */
 @MustBeDocumented
 @Target(AnnotationTarget.CLASS)
-@RequiresOptIn(message = "These class or interface should not be implemented outside of kotlinx.serialization library. You should only call its methods", level = RequiresOptIn.Level.ERROR)
+@RequiresOptIn(message = "This class or interface should not be inherited/implemented outside of kotlinx.serialization library. Read its documentation about inheritance for details.", level = RequiresOptIn.Level.ERROR)
 public annotation class SealedSerializationApi
 

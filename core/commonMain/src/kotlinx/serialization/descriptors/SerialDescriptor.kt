@@ -143,7 +143,7 @@ import kotlinx.serialization.encoding.*
  * This interface is safe to build using [buildClassSerialDescriptor] and [PrimitiveSerialDescriptor].
  */
 // TODO: there was a phrase 'and is safe to delegate implementation to existing instances.' but it is not true unless we enable -Xjvm-default
-@SubclassOptInRequired(InternalSerializationApi::class)
+@SubclassOptInRequired(SealedSerializationApi::class)
 public interface SerialDescriptor {
     /**
      * Serial name of the descriptor that identifies a pair of the associated serializer and target class.
@@ -165,7 +165,6 @@ public interface SerialDescriptor {
      * Kind should be consistent with the implementation, for example, if it is a [primitive][PrimitiveKind],
      * then its elements count should be zero and vice versa.
      */
-    @OptIn(ExperimentalSerializationApi::class) // TODO: stabilize serial kind
     public val kind: SerialKind
 
     /**

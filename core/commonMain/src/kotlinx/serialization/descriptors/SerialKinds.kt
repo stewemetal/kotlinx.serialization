@@ -234,7 +234,7 @@ public sealed class StructureKind : SerialKind() {
  * bounded and sealed polymorphism common property: not knowing the actual type statically and requiring
  * formats to additionally encode it.
  */
-@ExperimentalSerializationApi
+@ExperimentalSerializationApi // Intentionally left experimental to sort out things with buildSerialDescriptor(PolymorphicKind.SEALED)
 public sealed class PolymorphicKind : SerialKind() {
     /**
      * Sealed kind represents Kotlin sealed classes, where all subclasses are known statically at the moment of declaration.

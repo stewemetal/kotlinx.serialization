@@ -186,7 +186,6 @@ val experimentalsInTestEnabled get() = listOf(
     "-opt-in=kotlin.ExperimentalSubclassOptIn",
     "-opt-in=kotlinx.serialization.ExperimentalSerializationApi",
     "-opt-in=kotlinx.serialization.InternalSerializationApi",
-//    "-opt-in=kotlinx.serialization.encoding.AdvancedEncodingApi",
     "-P", "plugin:org.jetbrains.kotlinx.serialization:disableIntrinsic=false"
 )
 
