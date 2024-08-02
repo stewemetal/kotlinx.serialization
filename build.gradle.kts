@@ -8,7 +8,7 @@ import org.jetbrains.dokka.gradle.*
 plugins {
     base
     alias(libs.plugins.knit)
-    id("org.jetbrains.kotlinx.binary-compatibility-validator")
+    id("org.jetbrains.kotlinx.binary-compatibility-validator") version "0.16.2"
     id("org.jetbrains.dokka")
     id("benchmark-conventions")
 
