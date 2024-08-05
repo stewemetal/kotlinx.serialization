@@ -574,9 +574,3 @@ public inline fun <T> Decoder.decodeStructure(
     composite.endStructure(descriptor)
     return result
 }
-
-
-@OptIn(AdvancedEncodingApi::class)
-public interface InternalDecoder: Decoder
-
-private abstract class InternalDecoderImpl: InternalDecoder {}
